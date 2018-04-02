@@ -1,0 +1,11 @@
+<% Object.keys(messages).forEach(function(type) {%> 
+  <div class=" <%= type %>">
+    <% messages[type].forEach(function(message){%>
+      <script>
+        M.toast({html: '<%= message %>', classes: ''});  
+      </script>
+      
+    <%})%>
+  </div> 
+  <%})%>
+  

@@ -1,0 +1,22 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+  <% include partials/head %>
+  </head>
+
+  <body>
+  <% include partials/navbar %>
+  <%- messages('messages', locals) %>
+  <% if (typeof errors !== 'undefined') { errors.forEach(function(error){%>
+    <div class="alert alert-danger"><%= error.msg %></div>    
+  <% })} %>
+  
+  <%- body -%>
+   
+  <% include partials/footer %>
+   
+  <% include partials/javascript %>
+
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!-- Compiled and minified JavaScript -->
+
+
+<script>
+      $(document).ready(function () {
+        //Init Side nav
+        $('.section').fadeIn();
+
+        //hide preloader
+        $('.loader').fadeOut();
+
+        // init Side nav
+        $('.button-collapse').sidenav();
+
+        // init modal
+        $('.modal').modal();
+
+        //  Init select
+        $('select').formSelect();
+
+      });
+      $('.alert').append('<button class="waves-effect btn-flat close"><i class="material-icons">close</i></button>');
+
+$('body').on('click', '.alert .close', function() {
+    $(this).parent().fadeOut(300, function() {
+        $(this).remove();
+    });
+});
+
+  </script>
